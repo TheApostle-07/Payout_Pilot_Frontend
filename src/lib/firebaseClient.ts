@@ -26,7 +26,7 @@ const firebaseConfig = {
 
 let auth: Auth | null = null
 
-function initFirebase() {
+export function initFirebase() {
   if (typeof window === 'undefined') return
   if (!auth) {
     const app: FirebaseApp = getApps().length
