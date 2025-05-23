@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Papa, { ParseResult } from 'papaparse';
+import Papa from 'papaparse';
 import { CloudUpload, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface SessionData {
@@ -77,7 +77,7 @@ export default function AdminSessionsUploadPage() {
     Papa.parse(selected, {
       header: true,
       skipEmptyLines: true,
-      complete: (results: ParseResult<SessionData>) => {
+      complete: (results: any) => {
         if (results.errors.length) {
           setError('Error parsing CSV. Please check the file format.');
         } else {
