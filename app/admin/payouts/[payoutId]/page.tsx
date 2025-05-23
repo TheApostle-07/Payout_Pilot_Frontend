@@ -85,6 +85,8 @@ export default function PayoutPage({
 
   // Generate and download a PDF receipt
   function handleDownloadPDF() {
+    if (!payout) return;
+
     const doc = new jsPDF()
     doc.setFontSize(16)
     doc.text(`Receipt: ${payout.id}`, 14, 20)
