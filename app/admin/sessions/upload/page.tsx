@@ -74,7 +74,7 @@ export default function AdminSessionsUploadPage() {
     }
     setFile(selected);
 
-    Papa.parse<SessionData>(selected, {
+    Papa.parse(selected, {
       header: true,
       skipEmptyLines: true,
       complete: (results: ParseResult<SessionData>) => {
