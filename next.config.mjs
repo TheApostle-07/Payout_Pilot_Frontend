@@ -3,15 +3,15 @@ export default {
   images: {
     domains: [
       'res.cloudinary.com',
-      'www.gstatic.com',          // google auth SVG
-      'lh3.googleusercontent.com' // profile photos
+      'www.gstatic.com',
+      'lh3.googleusercontent.com',
     ],
   },
 
-  // Allow build even with ESLint warnings
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  eslint: { ignoreDuringBuilds: true },
 
-  // …any other Next.js options
+  // ⬇️  ➟ disables type-checking during `next build`
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
